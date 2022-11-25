@@ -538,6 +538,68 @@ footer .up{
     font-size: 18px;
 }
 
+/******RESPONSIVE 980px*******/
+@media screen and (max-width:980px) {
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;   
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: var(--background-box);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid var(--white-texts);
+        padding: 10px 0;
+    }
+}
+
+/******RESPONSIVE 700px*******/
+
+@media screen and (max-width:700px) {
+    .aboutme .file{
+        display: block;
+    }
+    .aboutme .file .col{
+        width: fit-content;
+    }
+    .skills .file{
+        display: block;
+    }
+    .skills .file .col{
+        width: 100%;
+    }
+    .skills .file .col .skill-bar{
+        width: 100%;
+    }
+    .portfolio .gallery{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .gallery .Project img{
+        width: 100%;
+    }
+    .contact .file{
+        display: block;
+    }
+    .contact .file .col{
+        width: 100%;
+    }
+
+
+}
+
+
+
 
 
 
