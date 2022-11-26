@@ -297,16 +297,14 @@ html{
     0%{width:0%;}
     100%{width: 5%;}
 }
-
-.skills .skill .htmlcss{
+.skills .skill .htmlCss{
     width: 0%;
-    animation: 2s htmlcss forwards;
+    animation: 2s htmlCss forwards;
 }
-@keyframes htmlcss{
+@keyframes htmlCss{
     0%{width:0%;}
     100%{width: 48%;}
 }
-
 .skills .skill .photoshop{
     width: 0%;
     animation: 2s photoshop forwards;
@@ -315,7 +313,6 @@ html{
     0%{width:0%;}
     100%{width: 85%;}
 }
-
 .skills .skill .cSharp{
     width: 0%;
     animation: 2s cSharp forwards;
@@ -324,7 +321,6 @@ html{
     0%{width:0%;}
     100%{width: 15%;}
 }
-
 .skills .skill .unity{
     width: 0%;
     animation: 2s unity forwards;
@@ -333,7 +329,14 @@ html{
     0%{width:0%;}
     100%{width: 18%;}
 }
-
+.skills .skill .gitGithub{
+    width: 0%;
+    animation: 2s gitGithub forwards;
+}
+@keyframes gitGithub{
+    0%{width:0%;}
+    100%{width: 18%;}
+}
 .skills .skill .adobeIllustrator{
     width: 0%;
     animation: 2s adobeIllustrator forwards;
@@ -342,12 +345,19 @@ html{
     0%{width:0%;}
     100%{width: 85%;}
 }
-
 .skills .skill .english{
     width: 0%;
     animation: 2s english forwards;
 }
 @keyframes english{
+    0%{width:0%;}
+    100%{width: 65%;}
+}
+.skills .skill .toonBoon{
+    width: 0%;
+    animation: 2s toonBoon forwards;
+}
+@keyframes toonBoon{
     0%{width:0%;}
     100%{width: 65%;}
 }
