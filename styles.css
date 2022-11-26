@@ -4,8 +4,9 @@
     --portfolio-color: linear-gradient(rgba(234, 84, 84, 0.8),rgba(234, 84, 84, 0.8));
     --white-texts: #FDE9C9;
     --contrast: #EA5455;
-    --background-box: #343434;
+    --background-box: rgba(52, 52, 52);
     --boxes: #2D4059;
+    --glass-Morphism: rgba(52, 52, 52, 0.3);
     --font-tittles: 'Montserrat', sans-serif;
 }
 *{
@@ -79,11 +80,14 @@ html{
 }
 .home .container-banner{
     padding: 20px;
-    background: var(--background-box);
+    background: var(--glass-Morphism);
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
+    box-shadow: 0 8px 32px 0 rgba(173, 75, 75, 0.3);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(173, 75, 75, 0.2);
 }
 .home .container-banner img{
     margin-top: 40px;
@@ -453,9 +457,9 @@ html{
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: var(--background-box);
+    background-color: var(--glass-Morphism);
     color: var(--white-texts);
-    font-size: 18px;
+    font-size: 18px;    
 }
 .contact button{
     cursor: pointer;
@@ -510,7 +514,7 @@ html{
 /******FOOTER********/
 
 footer{
-    background-color: var(--background-box);
+    background: var(--background-box);
     color: var(--white-texts);
     padding: 50px 0 30px 0;
     text-align: center;
