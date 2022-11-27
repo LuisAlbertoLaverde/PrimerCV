@@ -64,8 +64,8 @@ html{
     color: var(--white-texts);
     padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
     display: none;
+    cursor: pointer;
 }
 
 /******HOME SECCION********/
@@ -198,7 +198,6 @@ html{
 }
 .aboutme .file .col .container-interests .interest:hover{
     color: var(--contrast);
-    cursor: pointer;
 }
 .aboutme .file .col .container-interests .interest i{
     font-size: 30px;
@@ -242,6 +241,10 @@ html{
 .skills .container-section{
     max-width: 1100px;
     margin: auto;
+}
+.skills .container-section p{
+    padding: 30px;
+    color: var(--white-texts);
 }
 .skills h2{
     font-size: 48px;
@@ -443,24 +446,60 @@ html{
     text-align: center;
     padding: 20px 0;
 }
+.contact p{
+        padding: 30px;
+        color: var(--white-texts);
+}
 .contact .file{
     display: flex;
 }
 .contact .col{
-    width: 50%;
+    width: 50%; 
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact .col .info1{    
+    width: 100%;
     position: relative;
 }
+.contact .col input, .contact .col textarea, .contact .col span {
+    font-size: 1em; 
+    margin: 10px;
+} 
 .contact .col input, .contact .col textarea{
-    display: block;
-    width: 100%;
-    padding: 18px;
-    border: none;
-    margin-bottom: 20px;
+    border: 1px solid rgba(173, 75, 75, 0.2);
+    border-radius: 8px;
     background-color: var(--glass-Morphism);
+    width: 95%;
+    outline: none;
     color: var(--white-texts);
-    font-size: 18px;    
+    padding: 18px;
 }
+.contact .col span{
+    position: absolute;
+    left: 0;
+    padding: 16px;
+    pointer-events: none;
+    font-size: 18px;
+    color: var(--white-texts);
+
+} 
+.contact .col .info1 input:valid + span, 
+.contact .col .info1 input:focus + span,
+.contact .col .info1 textarea:valid + span, 
+.contact .col .info1 textarea:focus + span  
+{
+    color: var(--white-texts);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.8em;
+    padding: 0 10px;
+    background: rgba(52, 52, 52, 0.6);
+    border-left: 1px solid rgba(173, 75, 75, 0.3);
+    border-right: 1px solid rgba(173, 75, 75, 0.3);
+    letter-spacing: 5px; 
+} 
 .contact button{
     cursor: pointer;
     background: transparent;
@@ -472,8 +511,8 @@ html{
     font-size: 16px;
     color: var(--white-texts);
     position: relative;
-    z-index: 10;
-}
+    z-index: 10; 
+} 
 .contact button .overlay{
     position: absolute;
     top: 0;
@@ -483,7 +522,7 @@ html{
     background-color: var(--contrast);
     z-index: -1;
     transition: 1s;
-}
+} 
 .contact button:hover .overlay{
     width: 100%;
 }
@@ -491,7 +530,6 @@ html{
     width: 100%;
 }
 .contact .col .info{
-    position: absolute;
     top: 40%;
     background-color: var(--background-box);
     padding: 20px;
@@ -509,7 +547,7 @@ html{
     color: var(--contrast);
     display: inline-block;
     margin-right: 20px;
-}
+} 
 
 /******FOOTER********/
 
