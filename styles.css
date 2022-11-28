@@ -81,7 +81,7 @@ html{
 .home .container-banner{
     padding: 20px;
     background: var(--glass-Morphism);
-    max-width: 350px;
+    max-width: 60%;
     margin: auto;
     text-align: center;
     border-radius: 40px;
@@ -93,7 +93,7 @@ html{
     margin-top: 40px;
     color: var(--contrast);
     display: block;
-    width: 80%;
+    width: 50%;
     margin: auto;
     border-radius: 100% ;
 }
@@ -158,34 +158,42 @@ html{
     color: var(--contrast);
     font-weight: bold;
 }
-.aboutme .file{
+.aboutme .col{
     display: flex;
+    flex-direction: column;
 }
-.aboutme .file .col{
-    width: 50%;
-}
-.aboutme .file .col h3{
+.aboutme .col h3{
+    margin-top: 10px ;
     font-size: 28px;
     font-family: var(--font-tittles);
     margin-bottom: 25px;
 }
-.aboutme .file .col ul{
+.aboutme .col ul{
     list-style: none;
-}
-.aboutme .file .col ul li{
-    margin: 12px 0;
-}
-.aboutme .file .col ul li strong{
-    display: inline-block;
-    color: var(--contrast);
-    width: 130px;
-}
-.aboutme .file .col .container-interests{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
 }
-.aboutme .file .col .container-interests .interest{
-    width: 100px;
+.aboutme .col ul li{
+    padding: 0 15px;
+}
+.aboutme .col ul li strong{
+    color: var(--contrast);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.aboutme .col ul li span{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.aboutme .col .container-interests{
+    padding: 15px 0 0 18px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.aboutme .col .container-interests .interest{
+    width: 85%;
     height: 100px;
     background: var(--boxes);
     border-radius: 10px;
@@ -196,10 +204,10 @@ html{
     justify-content: center;
     transition: .3s;
 }
-.aboutme .file .col .container-interests .interest:hover{
+.aboutme .col .container-interests .interest:hover{
     color: var(--contrast);
 }
-.aboutme .file .col .container-interests .interest i{
+.aboutme .col .container-interests .interest i{
     font-size: 30px;
     margin-bottom: 10px;
 }
@@ -590,39 +598,35 @@ footer .up{
     font-size: 18px;
 }
 
-/******RESPONSIVE 980px*******/
-@media screen and (max-width:980px) {
-    nav{
-        display: none;
-    }
-    .nav-responsive{
-        display: block;   
-    }
-    nav.responsive{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 75px;
-        background-color: var(--background-box);
-        width: 180px;
-    }
-    nav.responsive ul{
-        display: block !important;
-    }
-    nav.responsive ul li{
-        border-bottom: 1px solid var(--white-texts);
-        padding: 10px 0;
+/******RESPONSIVE >279px*******/
+
+
+/******RESPONSIVE >359px*******/
+
+/******RESPONSIVE >413px*******/
+
+@media screen and (min-width:414px){
+    .aboutme .col ul{
     }
 }
 
-/******RESPONSIVE 700px*******/
+/******RESPONSIVE >539px*******/
 
-@media screen and (max-width:700px) {
-    .aboutme .file{
-        display: block;
+/******RESPONSIVE >767px*******/
+
+@media screen and (min-width:768px) {
+    .aboutme .col{
+        display: grid;
+        grid-template-columns: auto auto;
     }
-    .aboutme .file .col{
-        width: fit-content;
+    .aboutme .col ul {
+        margin-top: 15%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .aboutme .col .container-interests{
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
     .skills .file{
         display: block;
@@ -646,9 +650,45 @@ footer .up{
     .contact .file .col{
         width: 100%;
     }
-
-
 }
+
+/******RESPONSIVE >819px*******/
+
+@media screen and (max-width:412px){
+    .home .container-banner{
+    }
+}
+
+/******RESPONSIVE >911px*******/
+@media screen and (max-width:912px) {
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;   
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: var(--background-box);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid var(--white-texts);
+        padding: 10px 0;
+    }
+}
+
+/******RESPONSIVE >1023px*******/
+
+/******RESPONSIVE >1079px*******/
+
+
 
 
 
