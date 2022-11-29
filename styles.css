@@ -136,6 +136,7 @@ html{
 
 .aboutme{
     background: var(--background-box);
+    height: 100vh;
     color: var(--white-texts);
     padding: 50px 20px;
 }
@@ -241,6 +242,7 @@ html{
 /******SECCION TECHNICAL SKILLS********/
 
 .skills{
+    height: 100vh;
     background: var(--background-img);
     background-size: cover;
     color: var(--white-texts);
@@ -380,6 +382,7 @@ html{
 /******SECCION PORTFOLIO********/
 
 .portfolio{
+    height: 100vh;
     background-color: var(--background-box);
     color: var(--white-texts);
     padding: 50px 20px;
@@ -439,7 +442,9 @@ html{
 /******SECCION CONTACT********/
 
 .contact{
-    background-image: var(--background-img) ;
+    height: 80vh;
+    background: var(--background-img);
+    background-size: cover;
     background-color: var(--background-box);
     color: var(--white-texts);
     padding: 50px 0;
@@ -459,62 +464,71 @@ html{
         color: var(--white-texts);
 }
 .contact .file{
-    display: flex;
+    border: 1px solid green;
+    display: grid;
+    grid-template-columns: auto;
 }
 .contact .col{
-    width: 50%; 
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.contact .col .info1{    
-    width: 100%;
+    padding: 10px 20px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
 }
-.contact .col input, .contact .col textarea, .contact .col span {
-    font-size: 1em; 
-    margin: 10px;
-} 
-.contact .col input, .contact .col textarea{
-    border: 1px solid rgba(173, 75, 75, 0.2);
-    border-radius: 8px;
+.contact .col .info1{   
+    position: relative;
+    margin-bottom: 35px;
+}
+.contact .col .info1.w50{
+    width: 47%;
+}
+.contact .col .info1.w100{
+    width: 100%;
+}
+.contact .col .info1 input,
+.contact .col .info1 textarea{
+    width: 100%;
     background-color: var(--glass-Morphism);
-    width: 95%;
-    outline: none;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
     color: var(--white-texts);
-    padding: 18px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border-bottom: 1px solid rgba(173, 75, 75, 0.2);
 }
-.contact .col span{
+.contact .col .info1 textarea{
+    height: 120px;
+}
+.contact .col .info1 span{
     position: absolute;
     left: 0;
-    padding: 16px;
+    padding: 5px 0;
     pointer-events: none;
     font-size: 18px;
-    color: var(--white-texts);
-
-} 
-.contact .col .info1 input:valid + span, 
-.contact .col .info1 input:focus + span,
-.contact .col .info1 textarea:valid + span, 
-.contact .col .info1 textarea:focus + span  
+    font-weight: 300;
+    transition: 0.3s;
+}
+.contact .col .info1 input:focus ~ span,
+.contact .col .info1 input:valid ~ span,
+.contact .col .info1 textarea:focus ~ span,
+.contact .col .info1 textarea:valid ~ span
 {
-    color: var(--white-texts);
-    transform: translateX(10px) translateY(-7px);
-    font-size: 0.8em;
-    padding: 0 10px;
-    background: rgba(52, 52, 52, 0.6);
-    border-left: 1px solid rgba(173, 75, 75, 0.3);
-    border-right: 1px solid rgba(173, 75, 75, 0.3);
-    letter-spacing: 5px; 
-} 
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--contrast);
+    font-weight: 500;
+}
 .contact button{
     cursor: pointer;
     background: transparent;
     color: var(--white-texts);
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
+    width:fit-content;
     padding: 10px 22px;
     font-size: 16px;
     color: var(--white-texts);
@@ -534,24 +548,24 @@ html{
 .contact button:hover .overlay{
     width: 100%;
 }
-.contact .col img{
+.contact img{
+    border: 1px solid blue;
     width: 100%;
 }
-.contact .col .info{
+.contact .info{
+    border: 1px solid orangered;    
     top: 40%;
     background-color: var(--background-box);
     padding: 20px;
-    max-width: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 100%;
 }
-.contact .col .info ul{
+.contact .info ul{
     list-style: none;
 }
-.contact .col .info ul li{
+.contact .info ul li{
     margin-bottom: 20px;
 }
-.contact .col .info ul li i{
+.contact .info ul li i{
     color: var(--contrast);
     display: inline-block;
     margin-right: 20px;
@@ -628,18 +642,9 @@ footer .up{
         display: grid;
         grid-template-columns: auto auto auto;
     }
-    .skills .file{
-        display: block;
-    }
-    .skills .file .col{
-        width: 100%;
-    }
-    .skills .file .col .skill-bar{
-        width: 100%;
-    }
     .portfolio .gallery{
-        display: block;
-        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
     }
     .portfolio .gallery .Project img{
         width: 100%;
@@ -653,11 +658,6 @@ footer .up{
 }
 
 /******RESPONSIVE >819px*******/
-
-@media screen and (max-width:412px){
-    .home .container-banner{
-    }
-}
 
 /******RESPONSIVE >911px*******/
 @media screen and (max-width:912px) {
@@ -685,6 +685,14 @@ footer .up{
 }
 
 /******RESPONSIVE >1023px*******/
+
+@media screen and (min-width:1024px) {
+    .portfolio .gallery{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    }
+}
+
 
 /******RESPONSIVE >1079px*******/
 
