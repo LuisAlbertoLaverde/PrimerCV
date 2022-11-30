@@ -142,7 +142,7 @@ html{
 }
 .aboutme .container-section{
     max-width: 1100px;
-    margin: auto;
+    margin: auto; 
 }
 .aboutme h2{
     font-size: 48px;
@@ -151,6 +151,7 @@ html{
     padding: 20px 0;
 }
 .aboutme .container-section p{
+    padding: 8%;
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
@@ -163,8 +164,14 @@ html{
     display: flex;
     flex-direction: column;
 }
+.aboutme .col .information ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 20px;
+
+}
 .aboutme .col h3{
-    margin-top: 10px ;
+    margin: 10px 60px ;
     font-size: 28px;
     font-family: var(--font-tittles);
     margin-bottom: 25px;
@@ -250,10 +257,10 @@ html{
 }
 .skills .container-section{
     max-width: 1100px;
-    margin: auto;
+    margin: 200px auto; 
 }
 .skills .container-section p{
-    padding: 30px;
+    padding: 8%;
     color: var(--white-texts);
 }
 .skills h2{
@@ -382,14 +389,14 @@ html{
 /******SECCION PORTFOLIO********/
 
 .portfolio{
-    height: 100vh;
+    height: auto;
     background-color: var(--background-box);
     color: var(--white-texts);
     padding: 50px 20px;
 }
 .portfolio .container-section{    
     max-width: 1100px;
-    margin: auto;
+    margin: 200px auto; 
 }
 .portfolio h2{
     font-size: 48px;
@@ -442,7 +449,7 @@ html{
 /******SECCION CONTACT********/
 
 .contact{
-    height: 80vh;
+    height: 100vh;
     background: var(--background-img);
     background-size: cover;
     background-color: var(--background-box);
@@ -451,7 +458,7 @@ html{
 }
 .contact .container-section{
     max-width: 1100px;
-    margin: auto;
+    margin: 100px auto; 
 }
 .contact h2{
     font-size: 48px;
@@ -460,11 +467,10 @@ html{
     padding: 20px 0;
 }
 .contact p{
-        padding: 30px;
+        padding: 8%;
         color: var(--white-texts);
 }
 .contact .file{
-    border: 1px solid green;
     display: grid;
     grid-template-columns: auto;
 }
@@ -528,12 +534,14 @@ html{
     cursor: pointer;
     background: transparent;
     color: var(--white-texts);
-    width:fit-content;
-    padding: 10px 22px;
+    width: fit-content;
+    padding: 15px 22px;
     font-size: 16px;
     color: var(--white-texts);
+    z-index: 10;
+    margin-left: 39%;
     position: relative;
-    z-index: 10; 
+    top: -20px;
 } 
 .contact button .overlay{
     position: absolute;
@@ -549,18 +557,16 @@ html{
     width: 100%;
 }
 .contact img{
-    border: 1px solid blue;
     width: 100%;
 }
 .contact .info{
-    border: 1px solid orangered;    
-    top: 40%;
     background-color: var(--background-box);
-    padding: 20px;
-    left: 100%;
+    padding: 15px 27%;
 }
 .contact .info ul{
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 .contact .info ul li{
     margin-bottom: 20px;
@@ -619,12 +625,21 @@ footer .up{
 
 /******RESPONSIVE >413px*******/
 
-@media screen and (min-width:414px){
-    .aboutme .col ul{
-    }
-}
-
 /******RESPONSIVE >539px*******/
+
+/******RESPONSIVE >635px*******/
+
+@media screen and (max-width:635px) {
+    .portfolio .gallery{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .portfolio .container-section{    
+        max-width: 1100px;
+        margin: 200px auto; 
+    }
+    
+}
 
 /******RESPONSIVE >767px*******/
 
@@ -692,7 +707,6 @@ footer .up{
     grid-template-columns: auto auto auto;
     }
 }
-
 
 /******RESPONSIVE >1079px*******/
 
